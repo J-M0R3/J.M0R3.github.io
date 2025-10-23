@@ -1,14 +1,14 @@
 *{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* margin: 1cm; */
-    color: rgb(6, 54, 80);
+    color: rgb(212, 228, 237);
     text-align: center;
     
 }
 
 body{
-    background-color: rgba(145, 222, 227, 0.734);
-    background: linear-gradient(90deg, rgb(20, 237, 229), rgb(6, 54, 80));
+    background-color: rgb(1, 26, 52);
+  
     background-size: 200%;
     transition: background-position 0.5s ease, transform 0.3s ease;
 }
@@ -25,12 +25,12 @@ main{
 li a{ 
 display: inline-block;
     text-decoration: none;
-    background-color: rgb(14, 233, 226);
+    background-color: rgb(42, 174, 170);
     padding-inline: 1rem;
     padding-block: 1rem;
 margin: 1rem;
 border-radius: 5px;
-border: 2px solid rgb(6, 54, 80);
+border: 2px solid rgb(2, 33, 50);
 justify-content: center;
 flex-wrap: wrap;
     
@@ -38,7 +38,7 @@ flex-wrap: wrap;
 
 li a:hover{
     background-color: rgb(6, 54, 80);
-    color: white;
+    color: rgb(217, 239, 239);
     transition: 0.3s;
     cursor: pointer;
     transform: scale(1.1)
