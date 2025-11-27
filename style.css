@@ -1,39 +1,76 @@
-*{
+*
+{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* margin: 1cm; */
     color: rgb(212, 228, 237);
     text-align: center;
-    
 }
 
+/* 🎨 FONDO con figuras geométricas animadas */
 body{
-    background-color: rgb(1, 26, 52);
-  
-    background-size: 200%;
-    transition: background-position 0.5s ease, transform 0.3s ease;
+    background: rgb(1, 26, 52);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* FIGURAS FLOTANTES */
+body::before {
+    content: "";
+    position: absolute;
+    width: 180vw;
+    height: 180vh;
+    background-image:
+        radial-gradient(#49ffe6 20%, transparent 20%),
+        radial-gradient(#49ffe662 20%, transparent 20%),
+        radial-gradient(#49ffe633 20%, transparent 20%);
+
+    background-size: 120px 120px, 180px 180px, 250px 250px;
+    background-position:
+        0px 0px,
+        200px 300px,
+        600px 100px;
+
+    animation: moveShapes 25s linear infinite;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+@keyframes moveShapes {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-300px);
+    }
 }
 
 main{
-    display: flex;
+    display: inline;
     justify-content: center;
-    min-height: 50vh;
     align-items: center;
     flex-direction: column;
-    padding-top: 5rem;
+    min-height: 100vh;
+    padding-top: 10rem;
+    position: relative;
+    z-index: 10;
 }
 
 li a{ 
-display: inline-block;
+    display: inline-block;
     text-decoration: none;
     background-color: rgb(42, 174, 170);
     padding-inline: 1rem;
     padding-block: 1rem;
-margin: 1rem;
-border-radius: 5px;
-border: 2px solid rgb(2, 33, 50);
-justify-content: center;
-flex-wrap: wrap;
-    
+    margin: 1rem;
+    border-radius: 5px;
+    border: 2px solid rgb(2, 33, 50);
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 li a:hover{
@@ -41,24 +78,29 @@ li a:hover{
     color: rgb(217, 239, 239);
     transition: 0.3s;
     cursor: pointer;
-    transform: scale(1.1)
-    
-    
+    transform: scale(1.1);
 }
-
-
-
 
 ul{
     list-style: none;
-    /* display: flex; */
-    /* gap: 2rem;
-    justify-content: center;
-    padding-top: 2rem; */
+    display: inline;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 h1{
-font-size: 2.4rem;
-margin-bottom: 3rem;
-
+    font-family: condiment, cursive;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 4px;
+    color: #7CFFEA;
+    text-shadow: 0 0 8px #7CFFEA, 0 0 18px #33FFE0, 0 0 28px rgba(0,255,255,0.5);
 }
+
+.condiment-regular {
+  font-family: "Condiment", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
